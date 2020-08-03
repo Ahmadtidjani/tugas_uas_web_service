@@ -45,7 +45,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="angkatan">angkatan</label>
-                                <input type="number" class="form-control" name="angkatan" id="angkatan" value="{{$student->angkatan}}">
+                                <input type="text" class="form-control" name="angkatan" id="angkatan" value="{{$student->angkatan}}">
                             </div>
                             <button type="submit" class="btn btn-primary">Ubah Data!</button>
                             </form>
