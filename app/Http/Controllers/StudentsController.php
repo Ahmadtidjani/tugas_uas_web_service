@@ -113,7 +113,11 @@ class StudentsController extends Controller
      */
     public function destroy(Student $student)
     {
-        Student::destroy($student->id);
-        return redirect('/api/students')->with('status', 'data berhasilkan dihapus!');
+        try {
+            Student::destroy($student->id);
+            return redirect(url('/api/students'))->with('status', 'data berhasilkan dihapus!');
+        } catch (\Throwable $th) {
+            dd($th);
+        }
     }
 }
