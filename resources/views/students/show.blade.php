@@ -24,7 +24,7 @@
                                     <p class="card-text">Jurusan : {{$student->jurusan}}</p>
                                     <p class="card-text">Angkatan : {{$student->angkatan}}</p>
                                     <a href="{{$student->id}}/edit" class="btn btn-primary">edit</a>
-                                    <form action="/{{$student->id}}" method="post" class="d-inline">
+                                    <form action="students/{{$student->id}}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button class="btn btn-danger">hapus</button>
