@@ -115,7 +115,7 @@ class StudentsController extends Controller
     {
         try {
             Student::destroy($student->id);
-            return redirect(url('/api/students'))->with('status', 'data berhasilkan dihapus!');
+            // return redirect(url('/api/students'))->with('status', 'data berhasilkan dihapus!');
         } catch (\Throwable $th) {
             dd($th);
         }
